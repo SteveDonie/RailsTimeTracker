@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fullName: MyString
+  mobileNumber: MyString
+
+two:
+  fullName: MyString
+  mobileNumber: MyString

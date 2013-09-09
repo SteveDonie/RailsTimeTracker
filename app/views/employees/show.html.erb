@@ -1,0 +1,11 @@
+﻿<p>
+  <strong>Full Name:</strong>
+  <%= @employee.fullName %>
+</p>
+
+<p>
+  <strong>Mobile Number:</strong>
+  <%= @employee.mobileNumber.phony_formatted(:format => :international, :spaces => '-') %>
+</p>
+
+<%= link_to 'Show Employees', employees_path %>

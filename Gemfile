@@ -48,3 +48,6 @@ end
 
 #heroku integration as documented at https://devcenter.heroku.com/articles/rails4-getting-started
 gem 'rails_12factor', group: :production
+
+#gem for fomatting and validating phone numbers
+gem 'phony_rails'

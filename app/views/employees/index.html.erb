@@ -1,0 +1,20 @@
+<h1> Employees</h1>
+
+<%= link_to 'Add new Employee', new_employee_path %>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Phone Number</th>
+	</tr>
+	
+	<% @employees.each do |employee| %>
+		<tr>
+			<td><%= employee.fullName %></td>
+			<td><%= employee.mobileNumber.phony_formatted(:format => :international, :spaces => '-') %></td>
+
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Home', root_url %>
