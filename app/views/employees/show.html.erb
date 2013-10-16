@@ -9,5 +9,7 @@
   <%= @employee.mobileNumber.phony_formatted(:format => :international, :spaces => '-') %>
 </p>
 
+<%= link_to 'Edit', edit_employee_path(@employee) %>
+
 <%= link_to 'Show Employees', employees_path %>
 </div>

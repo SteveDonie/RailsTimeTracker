@@ -15,5 +15,8 @@
 /log/*.log
 /tmp
 
-#ignore .vagrant directort
+#ignore .vagrant directory
 /.vagrant
+
+# ignore packaged boxes
+/*.box

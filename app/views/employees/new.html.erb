@@ -1,32 +1,7 @@
 <div class="container-fluid">
 <h1>New Employee</h1>
 
-<%= form_for :employee, url: employees_path do |f| %>
-  <% if @employee.errors.any? %>
-  <div id="errorExplanation">
-    <h2><%= pluralize(@employee.errors.count, "error") %> prohibited
-      this employee from being saved:</h2>
-    <ul>
-    <% @employee.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
-  <p>
-    <%= f.label :fullName %><br>
-    <%= f.text_field :fullName %>
-  </p>
- 
-  <p>
-    <%= f.label :mobileNumber %><br>
-    <%= f.text_field :mobileNumber %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show Employees', employees_path %>
 </div>

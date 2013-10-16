@@ -14,6 +14,27 @@ class EmployeesController < ApplicationController
 		end
 	end
 
+	def update
+		@employee = Employee.find(params[:id])
+
+		if @employee.update(params[:employee].permit(:title, :text))
+			redirect_to @employee
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@employee = Employee.find(params[:id])
+		@employee.destroy
+		
+		redirect_to employees_path
+	end
+	
+	def edit
+		@employee = Employee.find(params[:id])
+	end
+	
 	def show
 		@employee = Employee.find(params[:id])
 	end

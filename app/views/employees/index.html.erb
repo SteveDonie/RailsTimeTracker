@@ -1,4 +1,4 @@
-<div class="container-fluid">
+﻿<div class="container-fluid">
 
 <h1> Employees</h1>
 
@@ -8,13 +8,19 @@
 	<tr>
 		<th>Name</th>
 		<th>Phone Number</th>
+		<th></th>
+		<th></th>
+		<th></th>
 	</tr>
 	
 	<% @employees.each do |employee| %>
 		<tr>
 			<td><%= employee.fullName %></td>
 			<td><%= employee.mobileNumber.phony_formatted(:format => :international, :spaces => '-') %></td>
-
+			<td><%= link_to 'Show', employee_path(employee) %></td>
+			<td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+			<td><%= link_to 'Delete', employee_path(employee),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
 </table>
