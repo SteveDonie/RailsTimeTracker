@@ -5,4 +5,10 @@ class Employee < ActiveRecord::Base
 
 	phony_normalize :mobileNumber, :default_country_code => 'US'
 
+	def as_json(options={})
+	{
+		:fullName => self.fullName,
+		:mobileNumber => self.mobileNumber
+	}
+	end
 end

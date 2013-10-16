@@ -37,10 +37,18 @@ class EmployeesController < ApplicationController
 	
 	def show
 		@employee = Employee.find(params[:id])
+		respond_to do |format|
+			format.html { render html: @employee }
+			format.json { render json: @employee }
+		end
 	end
 	
 	def index
 		@employees = Employee.all
+		respond_to do |format|
+			format.html { render html: @employees }
+			format.json { render json: @employees }
+		end
 	end
 	
 	private
